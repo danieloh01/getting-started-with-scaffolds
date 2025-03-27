@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # Routes for the Movie resource:
 
   # CREATE
-  post("/movies", { :controller => "movies", :action => "create" })
+  post("/movies", { :controller => "movies", :action => "create" })  #forms will necessitate new creation since post verb
           
   # READ
   get("/movies", { :controller => "movies", :action => "index" })
