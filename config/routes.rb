@@ -1,21 +1,25 @@
 Rails.application.routes.draw do
+  resources :books
   # Routes for the Movie resource:
 
-  # CREATE
-  post("/movies", { :controller => "movies", :action => "create" })  #forms will necessitate new creation since post verb
+
+  resources :movies
+
+  # # CREATE
+  # post("/movies", { :controller => "movies", :action => "create" })  #forms will necessitate new creation since post verb
           
-  # READ
-  get("/movies", { :controller => "movies", :action => "index" })
+  # # READ
+  # get("/movies", { :controller => "movies", :action => "index" })
   
-  get("/movies/:path_id", { :controller => "movies", :action => "show" })
+  # get("/movies/:id", { :controller => "movies", :action => "show" })
   
-  # UPDATE
-  patch("/movies/:path_id", { :controller => "movies", :action => "update" })
-  # post("/modify_movie/:path_id", { :controller => "movies", :action => "update" })
+  # # UPDATE
+  # patch("/movies/:id", { :controller => "movies", :action => "update" })
+  # # post("/modify_movie/:path_id", { :controller => "movies", :action => "update" })
   
-  # DELETE
-  # get("/delete_movie/:path_id", { :controller => "movies", :action => "destroy" })
-  delete("/movies/:path_id", { :controller => "movies", :action => "destroy" })
+  # # DELETE
+  # # get("/delete_movie/:path_id", { :controller => "movies", :action => "destroy" })
+  # delete("/movies/:id", { :controller => "movies", :action => "destroy" })
 
   #------------------------------
 
