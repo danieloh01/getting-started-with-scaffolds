@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   resources :movies
 
+  get "/movies/:id/edit", controller: "movies", action: "edit"
+
   # # CREATE
   # post("/movies", { :controller => "movies", :action => "create" })  #forms will necessitate new creation since post verb
           
